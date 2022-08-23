@@ -11,13 +11,14 @@ const ws = fs.createWriteStream("index.css")
 //设置文件编码
 rs.setEncoding("utf8")
 //匹配rem
-const remRa = /\d+(\.\d+)?rem/g
+const remRa = /(\.)?\d+(\.\d+)?rem/g
 rs.on("data", function (chunk) {
     console.log('开始转换');
     const str = chunk
     //rem改为px
-    ws.write(str.replace(/\d+(\.\d+)?rem/g, function (match) {
-        return match.slice(0, match.length - 3) * Proportion + "px"
+    ws.write(str.replace(remRa, function (match) {
+        console.log((parseFloat(match.slice(0, match.length - 3)) * Proportion).toFixed(2));
+        return (parseFloat(match.slice(0, match.length - 3)) * Proportion).toFixed(2) + "px"
     }))
 })
 rs.on("end", function () {
