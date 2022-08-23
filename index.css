@@ -1,0 +1,803 @@
+html,
+body {
+    overflow: hidden;
+}
+
+.index-container {
+    padding: 0 0 13.200000000000001px 0;
+    width: 100%;
+    height: 100vh;
+    background: url('../img/wifi-index-bg.png') no-repeat;
+    background-size: 100% 100vh;
+    overflow-y: auto;
+}
+
+.familyFont {
+    font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.index-container img {
+    width: 100%;
+    height: 33.3px;
+}
+
+.index-container .product-info {
+    position: relative;
+    margin-top: .370px;
+    margin-left: .260px;
+    padding: .520px .20px .20px .230px;
+    width: calc(100% - .520px);
+    min-height: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+
+/* .index-container .last-info {
+    border-radius: 2px 2px 0 0 !important;
+} */
+
+.index-container .nextStep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 13px;
+    background: #328CFD;
+    font-size: 3.2px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.index-container .choose-meal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 8.7px;
+}
+
+.index-container .choose-meal .left-choose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .10px 0;
+    width: calc(100% - 23.700000000000003px);
+    height: 13px;
+    font-size: 2.4px;
+    font-weight: 400;
+    color: #000000;
+    background: #FFFFFF;
+    line-height: .40px;
+}
+
+.index-container .choose-meal .right-choose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23.700000000000003px;
+    height: 13px;
+    background: #328CFD;
+    font-size: 3.2px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.index-container .choose-meal .left-choose .left-choose-bottom {
+    margin-left: .640px;
+    color: #328CFD;
+    text-decoration: underline;
+}
+
+.index-container .choose-meal .left-choose-top {
+    display: flex;
+    align-items: center;
+}
+
+.index-container .choose-meal .left-choose-top img {
+    margin-left: .260px;
+    margin-right: .90px;
+    width: .290px;
+    height: .290px;
+}
+
+.index-container .product-info .product-info-head {
+    position: absolute;
+    left: 22.400000000000002px;
+    top: -2.3000000000000003px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: .530px;
+    background-image: url('../img/product-info-head.png');
+    background-size: 22px .530px;
+    font-size: 2.7px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.index-container .product-info .prodcut-info-content {
+    font-size: 2.4px;
+    font-weight: 400;
+    color: #6A6A6A;
+}
+
+.index-container .product-info .prodcut-info-content div {
+    line-height: .30px;
+}
+
+.index-container .product-info .prodcut-price {
+    font-weight: 400;
+    color: #6A6A6A;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-size: 2.4px;
+}
+
+.index-container .product-info .prodcut-price table {
+    width: 100%;
+}
+
+.index-container .product-info .prodcut-price table tr {
+    width: 100%;
+    height: auto;
+    font-family: PingFangSC-Medium, PingFang SC;
+    border-bottom: 1px solid rgb(227 227 227) !important;
+    ;
+}
+
+.index-container .product-info .prodcut-price table tr th {
+    padding: .110px 0;
+    width: 25%;
+    height: auto;
+    font-size: 2.4px;
+    font-weight: 500;
+    border-right: 1px solid rgb(227 227 227) !important;
+    ;
+}
+
+.index-container .product-info .prodcut-price table thead tr th {
+    color: #328CFD;
+}
+
+.index-container .product-info .prodcut-price table tr th div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: .30px;
+}
+
+.index-container .product-info .prodcut-price table tr th:last-child {
+    border-right: 0;
+}
+
+.index-container .product-info .prodcut-price table tr td {
+    position: relative;
+    padding: .120px 0;
+    width: 25%;
+    height: auto;
+    color: #8C8C8C;
+    font-size: 2.4px;
+    font-weight: 500;
+    border-right: 1px solid rgb(227 227 227) !important;
+    ;
+}
+
+.index-container .product-info .prodcut-price table tr td img {
+    position: absolute;
+    top: .20px;
+    width: .370px;
+    height: .210px;
+}
+
+.index-container .product-info .prodcut-price table tr td:last-child {
+    border-right: 0;
+}
+
+.index-container .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .6);
+    z-index: 100;
+}
+
+.index-container .meal-dialog {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* bottom: -1000px; */
+    width: 100%;
+    transition: bottom 0.5s ease;
+    min-height: 66.7px;
+    background: #FFFFFF;
+    border-radius: 4px 4px 0px 0px;
+    z-index: 101;
+}
+
+.index-container .share-dialog {
+    position: absolute;
+    left: 0;
+    bottom: -1000px;
+    width: 100%;
+    transition: bottom 0.5s ease;
+    min-height: 39.7px;
+    background: #FFFFFF;
+    border-radius: 4px 4px 0px 0px;
+    z-index: 101;
+}
+
+.index-container .share-dialog .share-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6.7px;
+    background: #F4F4F4;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.index-container .share-dialog .cancel {
+    margin-top: .590px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 2.9px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #313131;
+}
+
+.index-container .share-picture-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    z-index: 102;
+    overflow-y: auto;
+}
+
+.index-container .share-picture-dialog .share-picture {
+    margin-top: .80px;
+    margin-left: .80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: .270px 0;
+    width: calc(100% - 16px);
+    min-height: 40vh;
+    background: #FFFFFF;
+    border-radius: .270px;
+    z-index: 102;
+}
+
+.index-container .share-picture-dialog #wifi-share-close-image {
+    position: absolute;
+    top: .20px;
+    right: .20px;
+    width: .480px;
+    height: .480px;
+}
+
+.index-container .share-picture-dialog .share-friend {
+    margin-top: .340px;
+    margin-left: .80px;
+    width: calc(100% - 16px);
+    height: 8.8px;
+    background: #EEEEEE;
+    border-radius: .50px;
+    font-size: 3.2px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #313131;
+}
+
+.to-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-container .share-picture-dialog .save-local {
+    margin-top: .160px;
+    margin-left: .80px;
+    width: calc(100% - 16px);
+    height: 8.8px;
+    background: #328CFD;
+    border-radius: .50px;
+    font-size: 3.2px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.index-container .share-picture-dialog .share-picture img {
+    width: calc(100% - .60px);
+    height: auto;
+}
+
+.index-container .share-picture-dialog .share-picture .share-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .310px;
+    width: calc(100% - .60px);
+    min-height: 80px;
+}
+
+.index-container .share-picture-dialog .share-picture .share-info .qr-code {
+    margin-right: .310px;
+    width: 80px;
+    height: 80px;
+}
+
+.index-container .share-picture-dialog .share-picture .share-info .qr-code img {
+    width: 80px;
+    height: 80px;
+}
+
+.index-container .share-picture-dialog .share-picture .share-info .share-description {
+    width: calc(100% - 80px);
+    min-height: 80px;
+    font-size: 2.1px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #313131;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.index-container .share-dialog .share-method {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: .360px;
+    width: 100%;
+}
+
+.index-container .share-dialog .share-method .share-method-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2.7px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #313131;
+}
+
+.index-container .share-dialog .share-method .share-method-only img {
+    width: 11.299999999999999px;
+    height: 11.299999999999999px;
+}
+
+.index-container .maxHeight {
+    bottom: 0;
+}
+
+.index-container .meal-dialog .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: .270px;
+    width: calc(100% - .540px);
+    height: 11.7px;
+    border-bottom: 1px solid rgb(227 227 227) !important;
+    ;
+}
+
+.index-container .meal-dialog .content {
+    width: 100%;
+    min-height: 50.7px;
+}
+
+.index-container .meal-dialog .content .content-item {
+    padding-bottom: .210px;
+    margin-left: .270px;
+    width: calc(100% - .540px);
+    border-bottom: 1px solid rgb(227 227 227) !important;
+    ;
+}
+
+.index-container .meal-dialog .content .content-item .title {
+    margin-top: .190px;
+    font-size: 2.4px;
+    font-weight: 500;
+    color: #242424;
+}
+
+.index-container .meal-dialog .content .content-item .content-body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.index-container .meal-dialog .pay-modal {
+    display: flex;
+    width: 100%;
+    height: .860px;
+    box-shadow: 0px -0.6px 1.9px 0px rgba(0, 0, 0, 0.09);
+}
+
+.index-container .meal-dialog .pay-modal .pay-price {
+    display: flex;
+    align-items: center;
+    margin-left: .270px;
+    width: calc(100% - 23.700000000000003px);
+    height: .860px;
+    background: #FFFFFF;
+    font-size: 2.4px;
+    font-weight: 500;
+    color: #8C8C8C;
+}
+
+.index-container .meal-dialog .pay-modal .pay-price .price-num {
+    margin-left: .70px;
+    margin-right: .90px;
+    font-size: 3.2px;
+    font-weight: 600;
+    color: #ED0000;
+}
+
+.index-container .meal-dialog .pay-modal .payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23.700000000000003px;
+    height: .860px;
+    background: #328CFD;
+    font-size: 3.2px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.index-container .meal-dialog .content .content-item .content-body div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3%;
+    margin-top: .20px;
+    width: 30%;
+    height: 6px;
+    background: #F5F5F5;
+    border-radius: 1px;
+    font-size: 2.4px;
+    font-weight: 400;
+    color: #8C8C8C;
+}
+
+.index-container .meal-dialog .content .content-item .content-body div .best-deal {
+    position: absolute;
+    right: .10px;
+    top: 0;
+    transform: translateY(-50%);
+    width: .640px;
+    height: .270px;
+}
+
+.index-container .meal-dialog .content .content-item .content-body .active {
+    background: #328CFD;
+    color: #FFFFFF;
+}
+
+.index-container .meal-dialog .head .car-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-25%);
+    width: 19.3px;
+    height: 19.3px;
+    background: #FFFFFF;
+    box-shadow: 0px 0.6px 1.3px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 2px;
+}
+
+.index-container .meal-dialog .head .title {
+    font-size: 3.2px;
+    font-weight: 500;
+    color: #242424;
+}
+
+.index-container .meal-dialog .head .dialog-close {
+    width: .40px !important;
+    height: .410px !important;
+}
+
+.index-container .meal-dialog .head .car-title img {
+    width: 17.3px;
+    height: 17.3px;
+}
+
+
+/* ipad 版样式 */
+
+
+/* @media only screen and (min-width: 641px) {
+    .index-container .meal-dialog {
+        position: absolute;
+        left: 0;
+        bottom: -1000px;
+        width: 100vw;
+        transition: bottom 0.5s ease;
+        height: 70vh;
+        background: #FFFFFF;
+        border-radius: 4px 4px 0px 0px;
+        z-index: 101;
+    }
+    .index-container .meal-dialog .content {
+        width: 100vw;
+        height: calc(70vh - 26.150000000000002px);
+        overflow-y: auto;
+    }
+    .index-container .maxHeight {
+        bottom: 0;
+    }
+} */
+
+.index-container .confirmTwiceDialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 48.7px;
+    background: #FFFFFF;
+    z-index: 101;
+}
+
+.index-container .confirmTwiceDialog .content-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 9.7px);
+}
+
+.index-container .confirmTwiceDialog .close {
+    position: absolute;
+    top: .330px;
+    right: .410px;
+    width: .40px;
+    height: .40px;
+}
+
+.index-container .confirmTwiceDialog .ok-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: .970px;
+    border-top: 0.1px solid #D2D3D5;
+    font-size: 2.4px;
+    font-family: MicrosoftYaHei;
+    color: #FF8C05;
+    line-height: 3.1px;
+}
+
+.index-container .confirmTwiceDialog .ok-confirm div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: .970px;
+    color: #FF8C05;
+}
+
+.index-container .confirmTwiceDialog .ok-confirm div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: .970px;
+    color: #fff;
+    background-color: #328CFD;
+}
+
+.index-container .confirmTwiceDialog .content-info img {
+    margin-top: .820px;
+    width: 13.3px;
+    height: 13.3px;
+}
+
+.index-container .confirmTwiceDialog .content-info .pay-fail {
+    margin-top: .40px;
+    font-size: 3.2px;
+    font-family: MicrosoftYaHei;
+    color: #000000;
+    line-height: 4.3px;
+}
+
+.index-container .confirmTwiceDialog .content-info .pay-fail-info {
+    /* margin-top: .20px; */
+    margin-top: .610px;
+    padding: 0 .20px;
+    font-size: 2.4px;
+    font-family: MicrosoftYaHei;
+    color: #999999;
+    line-height: 3.1px;
+}
+
+.index-container .phone-call {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 110;
+}
+
+.index-container .phone-call .phone-content {
+    position: fixed;
+    bottom: -100vh;
+    transition: bottom 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 13.3px;
+    background: #FFFFFF;
+    font-size: 3.2px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #242424;
+}
+
+.index-container .phone-call .phone-content-maxBottom {
+    bottom: 11.299999999999999px
+}
+
+.index-container .phone-call .phone-content img {
+    margin-right: .70px;
+    width: .370px;
+    height: .370px;
+}
+
+.index-container .phone-call .phone-content a {
+    font-size: 4px;
+    font-family: DINAlternate-Bold, DINAlternate;
+    font-weight: bold;
+    color: #328CFD;
+    text-decoration: none;
+}
+
+.index-container .phone-call .phone-cancel {
+    position: fixed;
+    bottom: -100vh;
+    transition: bottom 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: .930px;
+    background: #FFFFFF;
+    font-size: 3.2px;
+    font-family: MicrosoftYaHei;
+    color: #8C8C8C;
+}
+
+.index-container .phone-call .phone-cancel-maxBottom {
+    bottom: 0
+}
+
+.index-container .open-application {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff0;
+    z-index: 105;
+}
+
+.index-container .open-application .to-close {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.index-container .open-application .to-open {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 13.3px;
+    background-color: #fff;
+}
+
+.index-container .open-application .to-open .wifi-jf-icon {
+    width: .730px;
+    height: .730px;
+    background-color: #fff;
+}
+
+.index-container .open-application .to-open .open-aplication {
+    width: 16.4px;
+    height: .60px;
+}
+
+.index-container .open-application .to-open .open-info {
+    font-size: 2.8000000000000003px;
+    font-family: SourceHanSansSC-Regular, SourceHanSansSC;
+    font-weight: 400;
+    color: #242424;
+}
+
+.index-container .references {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .10px 0;
+    width: 100%;
+    min-height: 13.3px;
+    background: #FFFFFF;
+}
+
+.index-container .references .references-head {
+    width: .80px;
+    height: .80px;
+}
+
+.index-container .references .references-info {
+    width: 32px;
+    word-break: break-all;
+    font-size: 2.4px;
+    font-family: SourceHanSansSC-Regular, SourceHanSansSC;
+    font-weight: 400;
+    color: #242424;
+}
+
+.index-container .references .references-phone {
+    width: 19.3px;
+    height: .60px;
+}
+
+.loading {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: .70px;
+    background: rgb(0 0 0 / 50%);
+    color: #fff;
+    border-radius: .10px;
+    font-size: .30px;
+    z-index: 103;
+}
+
+.showPageOfNetWork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 102;
+}
+
+.showPageOfNetWork .pointing {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/pointing.png);
+    background-size: 100vw 100%;
+    opacity: .8;
+}

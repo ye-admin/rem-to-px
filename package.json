@@ -1,0 +1,17 @@
+{
+  "name": "rem-to-px",
+  "version": "1.0.0",
+  "description": "node脚本将文件中rem转换为px",
+  "scripts": {
+    "px": "node px"
+  },
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "keywords": [
+    "rem",
+    "px"
+  ]
+}
